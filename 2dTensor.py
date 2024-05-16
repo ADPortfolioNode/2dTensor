@@ -97,3 +97,66 @@ print("tensor example: ", tensor_example)
 print("What is the value on 3rd-column last two rows? ", tensor_example[1:3, 2])
 
 print(">>>>>>>>>>>>>>>>>>End of 2D Tensor<<<<<<<<<<<<<<<<<<<<<")
+
+# Practice: Use slice and index to change the values on the matrix tensor_ques.
+
+tensor_ques = torch.tensor([[11, 12, 13], [21, 22, 23], [31, 32, 33]])
+
+
+# Practice: Use slice and index to change the values on the matrix tensor_ques.
+
+
+
+tensor_ques = torch.tensor([[11, 12, 13], [21, 22, 23], [31, 32, 33]])
+tensor_ques[1:3,1] = 0
+
+print("The result: ", tensor_ques)
+print("The result: ", tensor_ques)
+
+#tensor operations
+print(">>>>>>>>>>>>>>>>>>Start of Tensor Operations<<<<<<<<<<<<<<<<<<<<<")
+
+# Calculate [[1, 0], [0, 1]] + [[2, 1], [1, 2]]
+
+X = torch.tensor([[1, 0],[0, 1]]) 
+Y = torch.tensor([[2, 1],[1, 2]])
+X_plus_Y = X + Y
+print("The result of X + Y: ", X_plus_Y)
+
+# Calculate 2 * [[2, 1], [1, 2]]
+
+Y = torch.tensor([[2, 1], [1, 2]]) 
+two_Y = 2 * Y
+print("The result of 2Y: ", two_Y)
+
+#Element-wise Product/Hadamard Product
+# Calculate [[1, 0], [0, 1]] * [[2, 1], [1, 2]]
+
+X = torch.tensor([[1, 0], [0, 1]])
+Y = torch.tensor([[2, 1], [1, 2]]) 
+X_times_Y = X * Y
+print("The result of X * Y: ", X_times_Y)
+
+# Calculate [[0, 1, 1], [1, 0, 1]] * [[1, 1], [1, 1], [-1, 1]]
+
+A = torch.tensor([[0, 1, 1], [1, 0, 1]])
+B = torch.tensor([[1, 1], [1, 1], [-1, 1]])
+A_times_B = torch.mm(A,B)
+print("The result of A * B: ", A_times_B)
+
+# Practice: Calculate the product of two tensors (X and Y) with different sizes 
+x = torch.tensor([[3,3,4],[3,4,2]])
+print("The size of tensor x: ", x.size())
+print("the shape of tensor x: ", x.shape)
+
+y = torch.tensor([[3,3],[3,4],[3,3]])
+print("the size of tensor y: ", y.size())
+print("the shape of tensor y: ", y.shape)
+
+# Type your code here
+xTimesy = torch.mm(x,y)
+
+print (xTimesy)
+
+
+print(">>>>>>>>>>>>>>>>>>End of Tensor Operations<<<<<<<<<<<<<<<<<<<<<")
